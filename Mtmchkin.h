@@ -1,7 +1,21 @@
 #ifndef MTMCHKIN_H_
 #define MTMCHKIN_H_
+#include <deque>
+#include "utilities.h"
+#include "Cards/Card.h"
+#include "Players/Player.h"
+#include <memory>
 
 class Mtmchkin{
+
+private:
+int m_numOfRounds;
+std::deque< std::shared_ptr<Player> > m_teamPlayer;
+std::deque< std::shared_ptr<Card> > m_groubCard;
+std::deque< std::shared_ptr<Player> > m_winners;
+std::deque< std::shared_ptr<Player> > m_losers;
+void initializeCards(const std::string fileName);
+
 
 public:
     
@@ -12,7 +26,7 @@ public:
     * @return
     *      A new instance of Mtmchkin.
     */
-    explicit Mtmchkin(const std::string &fileName);
+    Mtmchkin(const std::string fileName);
     
     /*
     * Play the next Round of the game - according to the instruction in the exercise document.
