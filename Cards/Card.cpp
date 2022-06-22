@@ -14,3 +14,21 @@ std::ostream& operator<<(std::ostream& os, const Card& r)
     printEndOfCardDetails(os);
     return os;
 }
+
+std::string Card::getName() const
+{
+    return m_cardName;
+}
+
+
+// void Card::printCardInfo(std::ostream& os) const
+// {
+//     printCardDetails(os , m_cardName);
+//     printEndOfCardDetails(os);
+// }
+
+// std::ostream& operator<<(std::ostream& os, const Card& r)
+// {
+//     r.printCardInfo(os);
+//     return os;
+// }

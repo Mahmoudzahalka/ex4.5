@@ -28,6 +28,21 @@ void Vampire::battleAbstract()
     return;
 }
 
+std::ostream& operator<<(std::ostream& os, const Vampire& r)
+{
+     os << "Card Details:" << std::endl;
+    os << "Name: " << r.getName() << std::endl;
+    bool isDragon = false;
+    if(r.m_cardName == "Dragon")    //check == should be ok
+    {
+        isDragon = true;
+    }
+    printMonsterDetails(os, r.getForce(), r.getHpLossOnDefeat(), r.getLoot(), isDragon );
+    printEndOfCardDetails(os);
+    return os;
+}
+
+
 //access problems to battle private fields
 //access problem to player's fields 
 //class friendship is not inherited !!!

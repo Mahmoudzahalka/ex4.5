@@ -6,6 +6,7 @@ class Dragon : public Battle
     public:
     Dragon();
     void battleAbstract() override;
+    friend std::ostream& operator<<(std::ostream& os, const Dragon& r);
 };
 
 

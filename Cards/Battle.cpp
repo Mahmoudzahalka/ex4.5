@@ -30,7 +30,7 @@ void Battle::applyEncounter(Player& player) const
 std::ostream& operator<<(std::ostream& os, const Battle& r)  //check battle&
 {
     os << "Card Details:" << std::endl;
-    os << "Name: " << r.m_cardName << std::endl;
+    os << "Name: " << r.getName() << std::endl;
     bool isDragon = false;
     if(r.m_cardName == "Dragon")    //check == should be ok
     {
@@ -54,3 +54,18 @@ int Battle::getHpLossOnDefeat() const
 {
     return m_hpLossOnDefeat;
 }
+
+
+// void Battle::printCardInfo(std::ostream& os) const
+// {
+//     os << "Card Details:" << std::endl;
+//     os << "Name: " << m_cardName << std::endl;
+//     bool isDragon = false;
+//     if(m_cardName == "Dragon")    //check == should be ok
+//     {
+//         isDragon = true;
+//     }
+//     printMonsterDetails(os, m_force, m_hpLossOnDefeat, m_loot, isDragon );
+//     printEndOfCardDetails(os);
+//     //return os;
+// }

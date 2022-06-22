@@ -9,6 +9,7 @@ class Vampire : public Battle
     Vampire();
     void applyEncounter(Player& player) const override;
     void battleAbstract() override;
+    friend std::ostream& operator<<(std::ostream& os, const Vampire& r);
 };
 
 

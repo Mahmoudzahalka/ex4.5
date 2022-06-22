@@ -6,6 +6,8 @@ class Goblin : public Battle
     public:
     Goblin();
     void battleAbstract() override;
+    friend std::ostream& operator<<(std::ostream& os, const Goblin& r);
+
 };
 
 

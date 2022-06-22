@@ -14,6 +14,8 @@ class Card
     Card& operator=(const Card& other) = default;
     virtual void applyEncounter(Player& player) const = 0;
     friend std::ostream& operator<<(std::ostream& os, const Card& r);  //check if needed and Card&
+    std::string getName() const;
+    //virtual void printCardInfo(std::ostream& os) const;
 };
 
 

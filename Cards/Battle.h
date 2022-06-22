@@ -6,7 +6,7 @@
 #include "Card.h" 
 class Battle : public Card
 {
-    private:
+    protected:
     int m_force;
     int m_loot;
     int m_hpLossOnDefeat;
@@ -21,6 +21,7 @@ class Battle : public Card
     int getForce() const;
     int getLoot() const;
     int getHpLossOnDefeat() const;
+    //void printCardInfo(std::ostream& os) const override;
 };
 
 
